@@ -1024,7 +1024,7 @@ textarea:focus {
   z-index: 1;
   margin-bottom: 50px; }
   .single-preparation-step h4 {
-    color: #474747;
+    color: #222222;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 60px;
     flex: 0 0 60px;
@@ -1039,7 +1039,7 @@ textarea:focus {
   .ingredients {
     margin-bottom: 80px; } }
 .ingredients h4 {
-  color: #474747;
+  color: #080808;
   margin-bottom: 30px; }
 .ingredients .custom-checkbox .custom-control-label::before {
   border-radius: 0; }
@@ -1056,7 +1056,7 @@ textarea:focus {
   padding-top: 5px;
   font-size: 16px;
   font-weight: 600;
-  color: #2f2f2f; }
+  color: #000000; }
 .ingredients .custom-control-label::after {
   top: 10px;
   left: 5px;
