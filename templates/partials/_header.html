@@ -14,8 +14,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="O que está procurando...">
+                    <form action="{% url 'buscar' %}">
+                        <input type="text" name="buscar" placeholder="O que está procurando...">
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
@@ -81,6 +81,12 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="{% url 'index' %}">Home</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="{% url 'cadastro' %}">Cadadstro</a></li>
                                 </ul>
 
                                 <!-- Formulario de busca -->

@@ -12,7 +12,17 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                        
+                        {% if  receita.foto_receita %}
+                        <a href="{% url 'receita' receita.id  %}">
+                            <img src="{{receita.foto_receita.url }}" alt="">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'receita' receita.id  %}">
+                            <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                        </a>
+                        {% endif %}
+                        
                         <div class="receipe-content">
                             <a href="{% url 'receita' receita.id  %}">
                                 <h5>{{ receita.nome_receita }}</h5>
@@ -22,6 +32,10 @@
                 </div>
                 {% endfor %}
                 {% else %}
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <p>
+                        Receita não encontrada
+                    </p>
                 {% endif %}
             </div>
         </div>
