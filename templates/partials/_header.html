@@ -80,13 +80,15 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
+                                    {% if user.is_authenticated %}
                                     <li><a href="{% url 'index' %}">Home</a></li>
-                                </ul>
-                                <ul>
+                                    <li><a href="{% url 'dashboard' %}">Minhas receitas</a></li>
+                                    <li><a href="{% url 'cria_receita' %}">Criar receita</a></li>
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    {% else %}
                                     <li><a href="{% url 'login' %}">Login</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="{% url 'cadastro' %}">Cadadstro</a></li>
+                                    <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+                                    {% endif %}
                                 </ul>
 
                                 <!-- Formulario de busca -->
